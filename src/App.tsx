@@ -3,7 +3,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import PrivacyPolicy from "./policy/PrivacyPolicy";
 import TermsOfService from "./policy/TermsOfService";
 import CookiesPolicy from "./policy/CookiesPolicy";
-import Index from "./components/index";
+import Index from ".";
 
 function App() {
   return (

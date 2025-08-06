@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { Shield, Clock, Award, Users, Globe, TrendingUp, CheckCircle, Truck, Phone, Mail, MapPin } from 'lucide-react';
-import Header from './Header';
-import Footer from './Footer';
-import { CopyableField } from './Copyable';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { CopyableField } from './components/Copyable';
 
 const container = {
   hidden: { opacity: 0 },
