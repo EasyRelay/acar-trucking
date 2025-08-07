@@ -36,8 +36,21 @@ function Index() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-white py-20 h-screen overflow-hidden">
+        <video
+          className="absolute top-0 left-0 w-full h-[90%] mb-10 object-cover z-0"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/truck_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="absolute top-0 left-0 w-full h-[90%] bg-black bg-opacity-40 z-0"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial="hidden"
@@ -45,10 +58,10 @@ function Index() {
               variants={fromLeft}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
                 Professional Transportation Solutions
               </h2>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+              <p className="text-xl text-white mb-10 leading-relaxed">
                 ACAR TRUCKING LLC delivers reliable, safe, and efficient logistics services nationwide.
                 Join our team of professional drivers or trust us with your cargo transportation needs.
               </p>
@@ -56,23 +69,10 @@ function Index() {
                 <a href="tel:3472638848" className="bg-red-600 text-white px-8 py-4 rounded-md font-semibold hover:bg-red-700 transition-colors text-center text-lg">
                   Apply Now
                 </a>
-                <a href="#contact" className="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-md font-semibold hover:bg-blue-900 hover:text-white transition-colors text-center text-lg">
+                <a href="#contact" className="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:text-black transition-colors text-center text-lg">
                   Get Quote
                 </a>
               </div>
-            </motion.div>
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              variants={fromRight}
-              viewport={{ once: true, margin: "-100px" }}
-              className="relative"
-            >
-              <img
-                src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Professional trucking services"
-                className="rounded-lg shadow-xl w-full"
-              />
             </motion.div>
           </div>
         </div>
